@@ -1,9 +1,11 @@
-* { box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+}
 
 body {
   margin: 0;
-  background: #880808;
-  color: #111;
+  background: #0a0a0a;
+  color: #e6e6e6;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 13px;
 }
@@ -11,14 +13,14 @@ body {
 .page {
   width: min(920px, calc(100% - 24px));
   margin: 18px auto;
-  background: #880808;
-  border: 1px solid #888;
-  box-shadow: 2px 2px 0 #aaa;
+  background: #160606;
+  border: 1px solid #4a0000;
+  box-shadow: 2px 2px 0 #000;
 }
 
 header {
-  background: #c8c8c8;
-  border-bottom: 1px solid #888;
+  background: #240707;
+  border-bottom: 1px solid #5c0000;
   padding: 9px 12px;
 }
 
@@ -27,21 +29,26 @@ header {
   font-size: 21px;
   font-weight: bold;
   letter-spacing: 1px;
+  color: #d00000;
 }
 
 .subtitle {
-  color: #555;
+  color: #999;
   margin: 2px 0 8px;
 }
 
-nav { font-size: 12px; }
+nav {
+  font-size: 12px;
+}
 
 a {
-  color: #0000cc;
+  color: #ff3333;
   text-decoration: underline;
 }
 
-a:visited { color: #551a8b; }
+a:visited {
+  color: #b30000;
+}
 
 main {
   padding: 14px;
@@ -49,27 +56,40 @@ main {
 }
 
 .notice {
-  background: #fff;
-  border: 1px solid #aaa;
+  background: #1c1c1c;
+  border: 1px solid #4a0000;
   padding: 8px;
   margin-bottom: 18px;
 }
 
-h1, h2 {
-  font-family: "Courier New", monospace;
+h1,
+h2 {
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-h1 { font-size: 21px; margin: 8px 0; }
-h2 { font-size: 16px; border-bottom: 1px solid #aaa; padding-bottom: 3px; }
+h1 {
+  font-size: 21px;
+  margin: 8px 0;
+  color: #e6e6e6;
+}
+
+h2 {
+  font-size: 16px;
+  border-bottom: 1px solid #5c0000;
+  padding-bottom: 3px;
+  color: #d00000;
+}
 
 .essay-list article {
-  background: #fff;
-  border: 1px solid #aaa;
+  background: #111;
+  border: 1px solid #4a0000;
   border-bottom: 0;
   padding: 9px;
 }
 
-.essay-list article:last-child { border-bottom: 1px solid #aaa; }
+.essay-list article:last-child {
+  border-bottom: 1px solid #4a0000;
+}
 
 .essay-title {
   font-weight: bold;
@@ -78,18 +98,18 @@ h2 { font-size: 16px; border-bottom: 1px solid #aaa; padding-bottom: 3px; }
 
 .date {
   float: right;
-  color: #666;
-  font-family: "Courier New", monospace;
+  color: #888;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .essay-list p {
   margin: 5px 0 0;
-  color: #444;
+  color: #aaa;
 }
 
 .essay-header {
-  background: #d9d9d9;
-  border: 1px solid #aaa;
+  background: #240707;
+  border: 1px solid #5c0000;
   padding: 8px;
   overflow: auto;
 }
@@ -100,8 +120,8 @@ h2 { font-size: 16px; border-bottom: 1px solid #aaa; padding-bottom: 3px; }
 }
 
 .essay {
-  background: #fff;
-  border: 1px solid #aaa;
+  background: #111;
+  border: 1px solid #4a0000;
   border-top: 0;
   padding: 18px;
   line-height: 1.65;
@@ -113,26 +133,40 @@ h2 { font-size: 16px; border-bottom: 1px solid #aaa; padding-bottom: 3px; }
 }
 
 .comment-note {
-  background: #fff;
-  border: 1px dashed #999;
+  background: #1c1c1c;
+  border: 1px dashed #5c0000;
   padding: 12px;
-  color: #555;
+  color: #aaa;
 }
 
 footer {
   display: flex;
   justify-content: space-between;
   gap: 10px;
-  background: #c8c8c8;
-  border-top: 1px solid #888;
+  background: #240707;
+  border-top: 1px solid #5c0000;
   padding: 8px 12px;
-  color: #555;
+  color: #888;
   font-size: 11px;
 }
 
 @media (max-width: 600px) {
-  .page { width: calc(100% - 8px); margin: 4px auto; }
-  main { padding: 8px; }
-  .date { float: none; display: block; margin-top: 4px; }
-  footer { flex-direction: column; }
+  .page {
+    width: calc(100% - 8px);
+    margin: 4px auto;
+  }
+
+  main {
+    padding: 8px;
+  }
+
+  .date {
+    float: none;
+    display: block;
+    margin-top: 4px;
+  }
+
+  footer {
+    flex-direction: column;
+  }
 }
