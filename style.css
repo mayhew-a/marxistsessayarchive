@@ -170,3 +170,30 @@ footer {
     flex-direction: column;
   }
 }
+/* Prevent long text and URLs from breaking the mobile layout */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.essay {
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.essay a {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+input,
+textarea {
+  max-width: 100%;
+  box-sizing: border-box;
+}
