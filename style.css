@@ -197,3 +197,7 @@ textarea {
   max-width: 100%;
   box-sizing: border-box;
 }
+.comments {
+  max-width: 100%;
+  overflow-x: hidden;
+}
