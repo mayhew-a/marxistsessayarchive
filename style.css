@@ -130,6 +130,8 @@ h2 {
 
 .comments {
   margin-top: 24px;
+      background: #c8c8c8;
+    padding: 20px 0;
 }
 
 .comment-note {
