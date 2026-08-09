@@ -36,15 +36,67 @@
         
 <section class="comments">
   <h2>COMMENTS</h2>
-  <div id="cusdis_thread"
-       data-host="https://cusdis.com"
-       data-app-id="d62a935b-10a5-4c03-a9cc-a535ff550559"
-       data-page-id="position-on-immigration"
-       data-page-url="https://mayhew-a.github.io/position-on-immigration.html"
-       data-page-title="Analysis of the necessary position on immigration">
-  </div>
+ <div id="cusdis_thread"
+     data-host="https://cusdis.com"
+     data-app-id="d62a935b-10a5-4c03-a9cc-a535ff550559"
+     data-page-id="position-on-immigration"
+     data-page-url="https://marxistessayarchive.com/position-on-immigration.html"
+     data-page-title="Analysis of the necessary position on immigration"
+     data-theme="dark">
+</div>
 
-  <script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
+<script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
+
+<script>
+const observer = new MutationObserver((mutations) => {
+    mutations.forEach((mutation) => {
+        if (mutation.addedNodes.length === 0) return;
+
+        const iframe = mutation.addedNodes[0];
+
+        if (iframe.tagName !== 'IFRAME') return;
+
+        const additionalStyles = `
+            body {
+                background: #3b0808 !important;
+                color: #ffffff !important;
+                font-family: Arial, Helvetica, sans-serif !important;
+            }
+
+            input,
+            textarea {
+                background: #250505 !important;
+                color: #ffffff !important;
+                border: 1px solid #888888 !important;
+            }
+
+            input::placeholder,
+            textarea::placeholder {
+                color: #ffffff !important;
+                opacity: 0.8 !important;
+            }
+
+            button {
+                color: #ffffff !important;
+            }
+
+            a {
+                color: #ffffff !important;
+            }
+        `;
+
+        iframe.srcdoc = iframe.srcdoc.replace(
+            '</style>',
+            additionalStyles + '</style>'
+        );
+    });
+});
+
+observer.observe(document.getElementById("cusdis_thread"), {
+    childList: true,
+    subtree: true
+});
+</script>
 </section>
     
       </section>
