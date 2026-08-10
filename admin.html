@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" type="image/png" href="logo.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ADMIN — NOTE LOGS</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page">
+    <header>
+      <div class="title">A MARXISTS ESSAY ARCHIVE</div>
+      <div class="subtitle">private administration</div>
+      <nav><a href="index.html">home</a> | <a href="note-logs.html">note logs</a></nav>
+    </header>
+
+    <main>
+      <section id="login-view" class="admin-box">
+        <h1>ADMIN LOGIN</h1>
+        <form id="login-form" class="admin-form">
+          <label for="login-email">EMAIL</label>
+          <input id="login-email" type="email" autocomplete="username" required>
+          <label for="login-password">PASSWORD</label>
+          <input id="login-password" type="password" autocomplete="current-password" required>
+          <div class="admin-actions"><button class="admin-button" type="submit">LOG IN</button></div>
+          <div id="login-message" class="admin-message" aria-live="polite"></div>
+        </form>
+      </section>
+
+      <section id="admin-view" hidden>
+        <div class="admin-box">
+          <div class="admin-actions" style="justify-content: space-between; align-items: center;">
+            <h1 style="margin: 0;">NOTE LOG ADMIN</h1>
+            <button id="logout-button" class="admin-secondary" type="button">LOG OUT</button>
+          </div>
+        </div>
+
+        <section class="admin-box">
+          <h2 id="form-heading">CREATE NEW NOTE</h2>
+          <form id="note-form" class="admin-form">
+            <input id="note-id" type="hidden">
+            <label for="note-title">NOTE TITLE</label>
+            <input id="note-title" required maxlength="200">
+
+            <label for="note-date">DATE</label>
+            <input id="note-date" type="date" required>
+
+            <label for="note-link">LINK (OPTIONAL)</label>
+            <input id="note-link" type="url" placeholder="https://...">
+
+            <label>TAGS</label>
+            <div id="admin-tag-options" class="admin-tag-options"></div>
+
+            <label for="note-content">NOTE</label>
+            <textarea id="note-content" required></textarea>
+
+            <div class="admin-actions">
+              <button id="save-draft" class="admin-secondary" type="button">SAVE DRAFT</button>
+              <button id="publish-note" class="admin-button" type="button">PUBLISH</button>
+              <button id="cancel-edit" class="admin-secondary" type="button" hidden>CANCEL EDIT</button>
+            </div>
+            <div id="form-message" class="admin-message" aria-live="polite"></div>
+          </form>
+        </section>
+
+        <section class="admin-box">
+          <h2>EXISTING NOTES</h2>
+          <div id="admin-notes-list"></div>
+        </section>
+      </section>
+    </main>
+
+    <footer>
+      <span>© 2026 MayA</span>
+      <span>private administration</span>
+    </footer>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+  <script src="admin.js"></script>
+</body>
+</html>

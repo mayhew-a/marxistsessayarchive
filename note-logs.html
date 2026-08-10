@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" type="image/png" href="logo.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NOTE LOGS</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page">
+    <header>
+      <div class="title">A MARXISTS ESSAY ARCHIVE</div>
+      <div class="subtitle">notes / essays / discussions</div>
+      <nav>
+        <a href="index.html">home</a> |
+        <a href="index.html#archive">archive</a> |
+        <a href="note-logs.html">note logs</a> |
+        <a href="about.html">about</a>
+      </nav>
+    </header>
+
+    <main>
+      <h2>NOTE LOGS</h2>
+
+      <section class="note-controls" aria-label="Note filters">
+        <div class="note-search-row">
+          <label for="note-search">SEARCH</label>
+          <input id="note-search" type="search" placeholder="Search notes..." autocomplete="off">
+        </div>
+
+        <div class="note-filter-row">
+          <div class="tag-filter-wrap">
+            <button id="tag-filter-button" class="filter-button" type="button" aria-expanded="false" aria-controls="tag-filter-menu">FILTER BY TAG ▼</button>
+            <div id="tag-filter-menu" class="tag-filter-menu" hidden>
+              <div class="tag-filter-heading">TAGS</div>
+              <div id="tag-options" class="tag-options"></div>
+              <div class="tag-filter-actions">
+                <button id="select-all-tags" type="button">ALL</button>
+                <button id="clear-tags" type="button">CLEAR FILTERS</button>
+              </div>
+            </div>
+          </div>
+
+          <label class="sort-label" for="note-sort">SORT</label>
+          <select id="note-sort">
+            <option value="newest">Newest → Oldest</option>
+            <option value="oldest">Oldest → Newest</option>
+          </select>
+        </div>
+      </section>
+
+      <div id="note-status" class="note-status" aria-live="polite"></div>
+      <div id="notes-list" class="note-list"></div>
+    </main>
+
+    <footer>
+      <span>© 2026 MayA</span>
+      <span>unfinished essays will be marked by "unf" in the title</span>
+    </footer>
+  </div>
+
+  <div id="note-modal" class="note-modal" hidden>
+    <div class="note-modal-backdrop" data-close-modal></div>
+    <section class="note-modal-window" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <button class="note-modal-close" type="button" aria-label="Close note" data-close-modal>×</button>
+      <div class="note-modal-header">
+        <div>
+          <h1 id="modal-title"></h1>
+          <div id="modal-tags" class="note-tags"></div>
+        </div>
+        <span id="modal-date" class="date"></span>
+      </div>
+      <div id="modal-content" class="note-full-content"></div>
+      <div id="modal-link" class="note-source-link"></div>
+    </section>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+  <script src="note-logs.js"></script>
+</body>
+</html>
