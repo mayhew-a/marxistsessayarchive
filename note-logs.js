@@ -175,7 +175,7 @@ function openModal(note) {
         link.href = url.href;
         link.target = '_blank';
         link.rel = 'noopener noreferrer';
-        link.textContent = 'OPEN LINK →';
+        link.textContent = 'SOURCE →';
         linkBox.appendChild(link);
       }
     } catch (_) {}
